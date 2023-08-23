@@ -1,0 +1,7 @@
+:root {
+    --secondary-color: crimson;
+    --primary-color: #330033;
+    --white-color: white;
+    --light-gray-color: #eeeeee;
+    --gap: 3rem;   /* usaremos no padding para espaçamento*/
+} 

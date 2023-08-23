@@ -1,0 +1,31 @@
+
+.main-bg {
+    background-image: url('/Documentos/landing-page-cursojs/assets/img/plano-de-fundo.svg');
+    background-size: cover;
+    background-position: center center; /* esses 2 backgrounds na minha opinião estão alinhando a imagem de fundo e , na hora que aumentamos e diminuimos a tela fazem o alinhamento dos objetos ficarem certinho*/
+    color: var(--white-color); /*é uma cor que criamos acima no ":root", acho que aqui é a cor da letra*/
+}
+
+.white-bg {
+    background: var(--white-color);   /*cor do fundo da pagina 2*/
+    color: var(--primary-color);   /*cor da letra da pagina 2*/
+}
+
+.main-content {
+    max-width: 120rem; /*a largura maxima do nosso site é 1200px*/
+    margin: 0 auto;
+    padding: 10rem var(--gap); /*aqui estamos aumentando a margem do topo, de todas as paginas, usam a classe mai-content*/
+}
+
+.section {
+    min-height: 100vh; /*todo mundo que tiver essa classe vai ter altura minima de 100 vh*/
+}
+
+.menu-spacing {
+    height: 65px;
+} /* esse menu empurra a section para atras do h2*/
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+} /* esse código faz com que , o campo que o possua ocupe a largura inteira da pagina, ex: o campo menssagem*/

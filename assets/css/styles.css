@@ -1,0 +1,255 @@
+.intro-content {
+    position: relative;
+    /*top: -8rem; /*espaçamento do topo*/
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /*isso esta deixando meu h2 e meu texto alinhado no canto esquerdo, no caso seria a grid esquerda de 1fr, e a grid direita maior com 1.5fr*/
+    gap: var(--gap);   /*acho que são espaçamentos, criamos essa --gap no :root*/
+    min-height: 100vh; /*a grid pegando 100% da altura*/
+}
+
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap; /*deixando o texto embaixo do titulo*/
+    justify-content: center;
+}  /* esse código também esta alinhando a figura dentro de sua grid*/
+
+
+
+.intro-img img, .intro-img svg {
+    max-width: 100%; 
+    height: auto;
+}/*esse código fez com que a imagem se adequace a pagina, sumindo as barras de rolagem*/
+
+.top3-content {
+    max-width: 64rem; /*64px de largura do texto sobre a apagina*/
+    display: flex;
+    /*flex-flow: column wrap; /* para deixar o h1 e os paragrafos organizados verticalmente ao centro da pagina, se não o h1 e os paragrafos ficariam dividindo a pagina em colunas */
+    flex-direction: column; /* para deixar o h1 e os paragrafos organizados verticalmente ao centro da pagina, se não o h1 e os paragrafos ficariam dividindo a pagina em colunas */
+    flex-wrap: nowrap; /*aqui é para não haver quebra de coluna na pagina, ao rodar a barra de rollagem para os lados, em telas menores*/
+    justify-content: center;
+    min-height: 100vh;   /*altura da pagina*/
+    text-align: center; /* texto alinhado no centro da pagina*/
+} /*com esse código alinhamos o top3, ao clicarmos no botão top3, a pagina aparece alinhada, antigamente ela aparecia cortada*/
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap; /* deixa certinho o titulo em cima e as 3 colunas de texto abaixo*/
+    justify-content: center;
+    min-height: 100vh;   /* altura da pagina*/
+}
+
+.grid-main-heading {
+    margin-bottom: 1rem; /*alinhando o h2 que esta embaixo do titulo*/
+}
+
+.grid-description {
+    padding-bottom: 5rem; /*alinhando o h2 que esta embaixo do titulo*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* dividiu os textos em 3 colunas (3, 1fr)*/
+    gap: var(--gap); /* deu um espaçamento entre as laterais das colunas*/
+    counter-reset: grid-counter; /* tem haver com a enumeração das grids*/
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative; /*aqui ele esta segurando na pagina o 1, 2, 3 dos teste, se não tiver esse position ele vai pra o topo da pagina 1*/
+    padding-left: 5rem ;
+    padding-bottom: 2rem; /*alinhamento dos textos das 3 grids*/
+}
+
+.grid h3::before {
+    counter-increment: grid-counter; /*implementa o contador*/
+    content: counter(grid-counter);  /*e aqui ele enumera as grids*/
+    position: absolute;
+    font-size: 8rem; /* tamanho das fontes dos numeros*/
+    font-style: italic;
+    top: -4rem;    /*parece que é o alinhamento dos numeros*/
+    left: -2rem;
+    transform: rotate(5deg); /*aqui esta deixando os numeros grandes mais deitados*/
+}
+
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden; /*aqui esconde o overflow, assim quando o conteudo for acessado por telas menores o conteudo ficara compacto e sem overflow*/
+}
+
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.contact-form {
+    grid-column: span 2; /*aqui estamos usando 2 colunas da grid, por isso o formulário ira ocupar um espaço maior na parte de baixo da pagina*/
+}
+
+.contact-form .form-grid {
+    border: none; /*tirando a borda do fieldset, ou seja a borda que envolvia o formulario*/
+    display: flex; /*fez com que os campos ficassem um na frente do outro em formato horizontal, diferente de como estava antes, um embaixo do outro*/
+    flex-direction: row;
+    flex-wrap: wrap; /* ele traz o campo messagem para baixo dos outros 3 campos, antes estava os 4 campos um na frente do outro*/
+    gap: var(--gap); /* ele da o espaçamento entre os campos*/
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;  /*tamanho da fonte*/
+    margin-bottom: 3rem; /*margem embaixo do "Contact me", entre ele e o texto*/
+} /* configurações da tag legend*/
+
+.form-group {
+    flex: 1 1 320px; /* quando a tela chegar em 320px para baixo, ele vai colocar os 4 campos em uma unica coluna um embaixo do outro*/    
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem; /*a margem abaixo dos label*/
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--white-color); /* cor de dentro do campo, ficou a mesma cor que a borda ou seja ela não aparece*/
+    padding: 1.5rem 2rem; /*espaçamentos dentro dos campos*/
+    width: 100%;
+    font-size: 3rem;
+    outline: none; /*aqui estamos tirando aquela borda que deixa em destaque o campo que esta sendo preenchido*/
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 10px 2px var(--secondary-color); /*o efeito que da de borda no campo ao ser selecionado */
+
+}
+
+.form-group button {
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color); /*cor da letra*/
+    padding: 1.5rem 2rem; /*espaçamento dentro do botão*/
+    font-size: 3rem; /*tamanho da fonte */
+    cursor: pointer;
+    transition: all 300ms ease-in-out;  /*efeito do botão*/
+} /*configurações do botão */
+
+.form-group button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+} /*efeito do botão*/
+
+.form-group ::placeholder {
+    color: var(--light-gray-color); /*cor da fonte do placeholder*/
+} 
+
+.footer {
+    text-align: center;  /*alinhamento do texto*/
+    font-size: 1.6rem;
+}
+
+.footer a {
+    color: var(--primary-color); /*cor da fonte*/
+}
+
+.heart {
+    color: var(--secondary-color) /*cor do coração*/
+}
+
+.footer p{
+    margin: 0;
+    padding: 3rem; /*espaçamento dentro do footer*/
+}
+
+.close-menu {
+    display: none;
+} /* para sumir a caixinha do checbox que aparecia junto com o menu-label, no canto superior esquerdo do site*/
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem; /*POSICIONAMENTO DO BOTÃO*/
+  right: 2rem; /*POSICIONAMENTO DO BOTÃO*/
+  background: var(--white-color);
+  width: 5rem;  /*TAMANHO do botão*/
+  height: 5rem; /*TAMANHO do botão*/
+  display: flex;  /* daqui até o terceiro, o 3 são para alinhar a seta dentro do circulo */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; /* inves de ser um box , vai ser um circulo  */
+  color: var(--primary-color);
+  transform: rotate(-90deg);  /* para deixar a seta virada para cima*/
+  border: 0.1rem solid var(--primary-color);  /* borda do circulo, essa borda serve para quando o botão estiver em um fundo branco, ai vai dar para ver o botão*/
+}
+
+@media (max-width: 800px) { 
+   .intro-content, .grid {
+    grid-template-columns: 1fr;
+   } /*quando a tela tiver 800px ou menos a pagina vai quebrar para apenas uma coluna. Esse código abaixo, até o "menu-content" é referente ao @media */
+
+   .gallery-img {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+   } /*aqui são as configurações de quebra de pagina para a parte da "section : Gallery".*/
+
+
+.gallery-img img {
+    width: 100%;
+} /* aqui é para a imagem não destorce, quando houver a quebra depagina*/
+
+.grid-one-content {
+    display: block; /*tiramos o display: flex pq na quebra de pagina ele acabava misturando o conteudo das paginas. E colocamos o display: block no lugar*/
+}
+
+.menu {
+    bottom: 0;
+}
+
+.menu-content, .menu-content ul {
+    flex-direction: column; /*deixou o logo centralizado acima, e os botões abaixo dele, tudo em uma coluna vertical*/
+    justify-content: center; /* o logo ficou muito acima dos botões, esse código juntou o logo ao primeiro botão "intro"*/
+}
+
+.menu-content {
+    height: 100vh;
+}
+
+.menu {
+    display: none;
+}
+
+.close-menu-label::after {
+    content: '☰'; /* esse simbolo pegamos no google*/
+    position: fixed; /* fixando o botão na pagina*/
+    z-index: 2;  /* colocando o botao na frente de todas as camadas */
+    top: 2rem; /*  posição do botão na pagina*/
+    right: 2rem; /*  posição do botão na pagina*/
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: 3rem;   /* tamanho da fonte das 3 linhas*/
+    line-height: 3rem;  /* alinhando as 3 linhas dentro do box*/
+    width: 3rem;  /* altura*/ 
+    height: 3rem;  /*largura*/
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer; /* altera o cursor do mouse ao passar no botão*/
+} /*configurações do botão de menu */
+
+.close-menu:checked~.menu {
+    display: block;
+} /* essa parte do código faz com que ao clicar no menu ele abra e apareça as opções, ao clicar novamente ele fecha*/
+
+
+.close-menu:checked~.close-menu-label::after {
+    content: '×';
+
+}/*aqui quando o menu estiver aberto aparecera o "x" quando estiver fechado aparecera o "☰"*/
+
+.menu-spacing {
+    display: none;
+} /* tira o espaçamento que tinha no canto superior do site, assim o botão menu-label fica direto sobre a pagina do site*/
+
+}

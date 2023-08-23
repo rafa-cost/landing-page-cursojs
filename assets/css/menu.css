@@ -1,0 +1,57 @@
+.menu {
+    background: var(--white-color);
+    position: fixed;   /*acho que aqui estamos colocando o menu em uma posição fixa na pagina, conseguimos rolar a pagina pela barra lateral, para cima e para baixo, mas o menu ficara sempre fixo no topo*/ 
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;  /*aqui estamos colocando o menu na camada da frente da imagem, assim a imagem a ser rolada, ira passar por tras do menu*/
+    border-bottom: 0.1rem solid var(--light-gray-color); /*cor da borda do menu*/
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between; /*aqui estamos alinhando os links do menu, para a parte direita da pagina*/
+    align-items: center; /*alinhando os links do menu*/
+    padding-top: 0;
+    padding-bottom: 0; /*"padding-top e bottom" faz com que o nosso menu fique com uma altura menor, praticamente do tamaho do logo*/
+}
+
+.menu h1 {
+    font-size: 2.3rem; /*tamanho da fonte 23px, aqui no caso é o logo*/
+    color: var(--primary-color);
+}
+
+.menu h1 a{
+    color: inherit;  /*aqui esta herdando a cor do pai ou do filho*/
+    
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}  /* aqui ele esta colocando os links do menu na forma vertical em vez da horizontal*/
+
+.menu ul li a {
+    display: block; /*transformando os links em bloco*/
+    padding: 2rem;  /*aqui fazendo o espaçamento entre os links(espaçamento nos quatro lados de cada link) na vertical*/
+    font-size: 1.8rem; /*tamanho da fonte dos links 18px*/
+    color: var(--primary-color);
+    position: relative;  /* isso que faz com que a borda vermelha pegue apenas o menu ul li a*/
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;  /*a borda ficando abaixo do menu, isso que colocou a borda no fundo do menu, 1rem(1pix) fez com que ela subisse um pouco*/
+    left: 50%; /*alinhamento para esquerda da borda*/
+    width: 0;  
+    height: 0.2rem;  /*tamanho da borda vermelha do menu*/
+    background: var(--secondary-color); /*cor da borda do menu ul li a */
+    transition: all 300ms ease-in-out; /* esse código faz com que o efeito fique lentamente*/
+}
+
+.menu ul li a:hover::after {
+    width: 50%; /*aqui esse 50% é para que a borda fique um pouco menor pegando certinho o nome de cada botão, esse código aqui faz com que tenha um efeito, de ao passar o mouse sobre o botão, apareça a borda, as configurações da borda estão acima*/
+    left: 25%; /*alinhamento do efeito, antes ele estava da esquerda pra direita, agora ele ta do meio para as pontas*/
+}

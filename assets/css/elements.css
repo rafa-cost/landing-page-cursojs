@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*esse código faz com que os campos dos formularios, tenham espaços entre si, quando estão na horizontal, um na frente do outro */
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth; /*faz com que ao clicarmos nos botões, a pagina role lentamente até o conteúdo desejado*/
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5; /*espaçamento entre as linhas do texto */
+
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;  /*deixando o texto tudo em maiusculo*/
+}
+
+h2 {
+    font-size: 6rem;     /* tamanho do h2*/
+    margin-bottom: 5rem;  /*margem para o texto*/
+    text-transform: uppercase; /*deixou tudo maiusculo o h2*/
+    line-height: 1.2; /*espaçamento das linhas do h2*/
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none; /*aqui estamos tirando os sublinhados dos links*/
+}
+
+p {
+    margin-bottom: 3rem; /* essa é a margem que estamos colocando entre os paragrafos da segunda pagina*/
+}
+
+.responsive-table {
+    overflow: hidden;
+    overflow-x: auto;
+}  /*esee é o overflow que aparece embaixo da tabela, quando diminuimos a tela */
+
+table {
+    min-width: 360px; /*tamanho minimo da tabela, dependendo da tela do dispositivo, menor que 360px não fica*/
+    width: 100%;
+    border-collapse: collapse; /*a tabela estava com linhas duplas com esse código ela ficou com apenas uma linha*/
+}
+
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem; /* margem entre a tabela e o texto*/
+} /*configuração da descrição acima da tabela*/
+
+table td, table th {
+    white-space: nowrap; /*para não quebrar o texto da tabela, quando for acessada por telas menores*/
+    padding: 1rem;
+    text-align: left; /*alinhando os elementos da tabela a esquerda*/
+    border: 0.1rem solid var(--light-gray-color); /*aqui estamos adicionando a tabela nas tags, table td e table th, adicionando as bordas*/
+    
+}
+tfoot td, table th {
+    background: var(--light-gray-color); /*a primeiro linha da tabela e a ultima, ficaram em destaque com uma cor mais forte*/
+}

@@ -206,6 +206,7 @@
 
 .menu {
     bottom: 0;
+    text-align: center; /*alinhou os botões do menu na coluna, um embaixo do outro centralizado na coluna*/
 }
 
 .menu-content, .menu-content ul {

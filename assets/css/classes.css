@@ -1,6 +1,6 @@
 
 .main-bg {
-    background-image: url('/Documentos/landing-page-cursojs/assets/img/plano-de-fundo.svg');
+    background-image: url('../img/plano-de-fundo.svg');
     background-size: cover;
     background-position: center center; /* esses 2 backgrounds na minha opinião estão alinhando a imagem de fundo e , na hora que aumentamos e diminuimos a tela fazem o alinhamento dos objetos ficarem certinho*/
     color: var(--white-color); /*é uma cor que criamos acima no ":root", acho que aqui é a cor da letra*/

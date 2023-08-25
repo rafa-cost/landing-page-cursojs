@@ -2,7 +2,7 @@
     position: relative;
     /*top: -8rem; /*espaçamento do topo*/
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /*isso esta deixando meu h2 e meu texto alinhado no canto esquerdo, no caso seria a grid esquerda de 1fr, e a grid direita maior com 1.5fr*/
+    grid-template-columns: 1fr 1.5fr; /*isso esta deixando meu h2 e meu texto alinhado no canto esquerdo, no caso seria a grid esquerda de 1fr, e a grid direita maior com 1.5fr onde fica a figura svg*/
     gap: var(--gap);   /*acho que são espaçamentos, criamos essa --gap no :root*/
     min-height: 100vh; /*a grid pegando 100% da altura*/
 }
@@ -48,7 +48,7 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* dividiu os textos em 3 colunas (3, 1fr)*/
+    grid-template-columns: repeat(3, 1fr); /* dividiu os textos em 3 colunas do mesmo tamanho (3, 1fr)*/
     gap: var(--gap); /* deu um espaçamento entre as laterais das colunas*/
     counter-reset: grid-counter; /* tem haver com a enumeração das grids*/
 }
@@ -83,7 +83,7 @@
 }
 
 .gallery-img img:hover {
-    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);   /* esse código e o acima é referente ao efeito das figuras do gallery*/
 }
 
 .contact-form {
@@ -95,7 +95,7 @@
     display: flex; /*fez com que os campos ficassem um na frente do outro em formato horizontal, diferente de como estava antes, um embaixo do outro*/
     flex-direction: row;
     flex-wrap: wrap; /* ele traz o campo messagem para baixo dos outros 3 campos, antes estava os 4 campos um na frente do outro*/
-    gap: var(--gap); /* ele da o espaçamento entre os campos*/
+    gap: var(--gap); /* ele da o espaçamento entre os campos, do lado de fora*/
 }
 
 .form-grid legend {
@@ -178,7 +178,7 @@
   display: flex;  /* daqui até o terceiro, o 3 são para alinhar a seta dentro do circulo */
   justify-content: center;
   align-items: center;
-  border-radius: 50%; /* inves de ser um box , vai ser um circulo  */
+  border-radius: 50%; /* inves de ser um box , vai ser um circulo , esse código faz um box virar um circulo */
   color: var(--primary-color);
   transform: rotate(-90deg);  /* para deixar a seta virada para cima*/
   border: 0.1rem solid var(--primary-color);  /* borda do circulo, essa borda serve para quando o botão estiver em um fundo branco, ai vai dar para ver o botão*/
@@ -198,7 +198,7 @@
 
 .gallery-img img {
     width: 100%;
-} /* aqui é para a imagem não destorce, quando houver a quebra depagina*/
+} /* aqui é para a imagem não distorce, quando houver a quebra depagina*/
 
 .grid-one-content {
     display: block; /*tiramos o display: flex pq na quebra de pagina ele acabava misturando o conteudo das paginas. E colocamos o display: block no lugar*/
@@ -251,6 +251,6 @@
 
 .menu-spacing {
     display: none;
-} /* tira o espaçamento que tinha no canto superior do site, assim o botão menu-label fica direto sobre a pagina do site*/
+} /* tira o espaçamento branco que tinha no canto superior do site, assim o botão menu-label fica direto sobre a pagina do site*/
 
 }

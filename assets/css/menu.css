@@ -23,14 +23,14 @@
 }
 
 .menu h1 a{
-    color: inherit;  /*aqui esta herdando a cor do pai ou do filho*/
+    color: inherit;  /*aqui a tag a esta herdando a cor da tag h1*/
     
 }
 
 .menu ul {
     list-style: none;
     display: flex;
-}  /* aqui ele esta colocando os links do menu na forma vertical em vez da horizontal*/
+}  /* aqui ele esta colocando os links do menu na forma horizontal em vez da vertical*/
 
 .menu ul li a {
     display: block; /*transformando os links em bloco*/
@@ -48,7 +48,7 @@
     width: 0;  
     height: 0.2rem;  /*tamanho da borda vermelha do menu*/
     background: var(--secondary-color); /*cor da borda do menu ul li a */
-    transition: all 300ms ease-in-out; /* esse código faz com que o efeito fique lentamente*/
+    transition: all 300ms ease-in-out; /* esse código faz com que o efeito fique lentamente ao passar o cursor*/
 }
 
 .menu ul li a:hover::after {

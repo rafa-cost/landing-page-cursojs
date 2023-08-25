@@ -51,11 +51,11 @@ h6 {
 }
 
 a {
-    text-decoration: none; /*aqui estamos tirando os sublinhados dos links*/
+    text-decoration: none; /*aqui estamos tirando os sublinhados dos links, essa tg a é referente a links*/
 }
 
 p {
-    margin-bottom: 3rem; /* essa é a margem que estamos colocando entre os paragrafos da segunda pagina*/
+    margin-bottom: 3rem; /* a tags p, tera uma margem abaixo de 3rem*/
 }
 
 .responsive-table {
@@ -80,7 +80,7 @@ table td, table th {
     white-space: nowrap; /*para não quebrar o texto da tabela, quando for acessada por telas menores*/
     padding: 1rem;
     text-align: left; /*alinhando os elementos da tabela a esquerda*/
-    border: 0.1rem solid var(--light-gray-color); /*aqui estamos adicionando a tabela nas tags, table td e table th, adicionando as bordas*/
+    border: 0.1rem solid var(--light-gray-color); /*aqui estamos adicionando a tabela nas tags, table td e table th, adicionando as bordas e sua largura*/
     
 }
 tfoot td, table th {

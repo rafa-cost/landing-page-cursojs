@@ -1,6 +1,6 @@
 
 .main-bg {
-    background-image: url('../img/plano-de-fundo.svg');
+    background-image: url('../img/plano-de-fundo.svg');  /*imagem de fundo do site*/
     background-size: cover;
     background-position: center center; /* esses 2 backgrounds na minha opinião estão alinhando a imagem de fundo e , na hora que aumentamos e diminuimos a tela fazem o alinhamento dos objetos ficarem certinho*/
     color: var(--white-color); /*é uma cor que criamos acima no ":root", acho que aqui é a cor da letra*/
@@ -13,7 +13,7 @@
 
 .main-content {
     max-width: 120rem; /*a largura maxima do nosso site é 1200px*/
-    margin: 0 auto;
+    margin: 0 auto;    /*é para  centralizar a pagina do site ao meio da tela*/
     padding: 10rem var(--gap); /*aqui estamos aumentando a margem do topo, de todas as paginas, usam a classe mai-content*/
 }
 
@@ -28,4 +28,4 @@
 body .full-width {
     width: 100%;
     flex: 1 1 100%;
-} /* esse código faz com que , o campo que o possua ocupe a largura inteira da pagina, ex: o campo menssagem*/
+} /* esse código faz com que , o campo que o possua ocupe a largura inteira da pagina, ex: o campo menssagem e o emial*/
